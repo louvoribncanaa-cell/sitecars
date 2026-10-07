@@ -5,7 +5,7 @@ const compression = require('compression');
 const morgan = require('morgan');
 
 const app = express();
-const PORT = Number.parseInt(process.env.PORT, 10) || 3000;
+const PORT = Number.parseInt(process.env.PORT, 10) || 3001;
 const PUBLIC_DIR = path.join(__dirname, 'public');
 const IS_PROD = process.env.NODE_ENV === 'production';
 

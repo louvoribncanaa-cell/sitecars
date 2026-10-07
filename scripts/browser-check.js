@@ -7,7 +7,7 @@ const CANDIDATES = [
   'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe'
 ];
 const EXECUTABLE = process.env.BROWSER_PATH || CANDIDATES.find((p) => fs.existsSync(p));
-const BASE = process.env.BASE_URL || 'http://127.0.0.1:3000';
+const BASE = process.env.BASE_URL || 'http://127.0.0.1:3001';
 
 (async () => {
   if (!EXECUTABLE) throw new Error('Navegador Chrome/Edge nao encontrado');

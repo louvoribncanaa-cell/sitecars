@@ -9,7 +9,7 @@ FROM node:20-alpine AS runner
 RUN apk add --no-cache curl tzdata
 
 ENV NODE_ENV=production \
-    PORT=3000 \
+    PORT=3001 \
     TZ=America/Sao_Paulo
 
 WORKDIR /app
@@ -22,9 +22,9 @@ COPY --chown=app:app server.js ./
 COPY --chown=app:app public ./public
 
 USER app
-EXPOSE 3000
+EXPOSE 3001
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
-  CMD curl -fsS http://127.0.0.1:3000/healthz || exit 1
+  CMD curl -fsS http://127.0.0.1:3001/healthz || exit 1
 
 CMD ["node", "server.js"]
