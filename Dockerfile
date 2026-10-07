@@ -9,7 +9,7 @@ FROM node:20-alpine AS runner
 RUN apk add --no-cache curl tzdata
 
 ENV NODE_ENV=production \
-    PORT=3001 \
+    PORT=3000 \
     TZ=America/Sao_Paulo
 
 WORKDIR /app
