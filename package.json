@@ -1,0 +1,26 @@
+{
+  "name": "driveelite-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page DriveElite servida por Node/Express - pronta para Easypanel",
+  "main": "server.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "smoke": "node scripts/smoke.js",
+    "check": "node scripts/browser-check.js"
+  },
+  "dependencies": {
+    "compression": "^1.8.1",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^25.12.0"
+  }
+}
